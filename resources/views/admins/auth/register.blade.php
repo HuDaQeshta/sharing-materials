@@ -1,5 +1,9 @@
 @extends('layouts.app')
-
+@section('login')
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.login') }}">{{ __('Login') }}</a>
+</li>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -61,7 +65,7 @@
                                 </span>
                                 @enderror
                             </div>
-                            @endforeach
+                        @endforeach
                         </div>
                     </div>
                     <div class="row">

@@ -20,6 +20,11 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
+                        @if (Route::has('admin.register'))
+                            <a href="{{ route('admin.register') }}">Register</a>
+                        @else
+                        <a href="#" class="d-none">Register</a>
+                        @endif
                     @endauth
                 </div>
             @endif

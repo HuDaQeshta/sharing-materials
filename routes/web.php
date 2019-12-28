@@ -19,7 +19,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Auth::routes();
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::view('/','admins.welcome');
+    Route::post('/panel','UserController@index')->name('panel');
 });
